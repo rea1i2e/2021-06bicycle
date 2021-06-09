@@ -1,7 +1,15 @@
-header, main {
+ul {
+    list-style: none;
+}
+
+/* 
+header
+*/
+
+header {
   margin: 0 auto;
   max-width:960px;
-  padding: 4%;
+  padding: 0 4%;
   align-items: center;
   /* background:silver; */
 }
@@ -23,7 +31,6 @@ nav ul {
 }
 
 nav ul li {
-  list-style: none;
   font-size: 18px;
   margin-left: 24px;
 }
@@ -38,24 +45,50 @@ nav a:hover {
   opacity:.7
 }
 
+/* 
+main-visual
+*/
+
 .main-visual {
   width: 100%;
+  max-width: 1920px;
   height: 600px;
+  object-fit: cover;
 }
+
+.wrapper {
+  margin: 0 auto 100px auto;
+  max-width:960px;
+  padding: 4%;
+  align-items: center;
+  /* background:silver; */
+}
+
+
+/* 
+section
+ */
+
 
 section {
   /* width: 960px; */
   align-items: center;
 }
 
-/* div {
-  background: lime;
-} */
-
-h1 {
+h2 {
   /* background: gray; */
   text-align: center;
   font-size: 32px;
+}
+
+.bicycle-container h3 {
+  /* background: gray; */
+  text-align: center;
+  font-size: 24px;
+}
+
+.under-line {
+  border-bottom: solid 2px gray;
 }
 
 img {
@@ -63,30 +96,34 @@ img {
   margin: 0 auto;
 }
 
-.about img {
+#about img {
   border-radius: 50%;
   width:240px;
   height:240px;
   }
+
 
 .bicycle {
   /* background: pink; */
   text-align: center;
 }
 
-.under-line {
-  border-bottom: solid 2px gray;
-}
 
 .bicylcleImg {
   width: 100%;
 }
 
-footer {
-  padding-top :300px;
+/* 
+footer
+ */
+
+ footer {
   text-align: center;
 }
 
+/* 
+PC版表示
+ */
 @media (min-width: 600px) {
   .contents-inner {
     display: flex;
@@ -95,7 +132,7 @@ footer {
 
   .bicycle-container {
     width: 30%;
-    border: solid 1px;
+    /* border: solid 1px; */
   }
 
 }
