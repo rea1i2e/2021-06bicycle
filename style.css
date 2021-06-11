@@ -6,24 +6,33 @@ ul {
 header
 */
 
-header {
-  margin: 0 auto;
-  max-width:960px;
-  padding: 0 4%;
-  align-items: center;
-  /* background:silver; */
+html, body {
+  width: 100%;
 }
 
+
 .header-inner {
+  margin: 0 auto;
+  width: 100%;
+  max-width:960px;
+  padding: 0 4%;
   display:flex;
+  /* position: fixed;
+  top:0;
+  left: 50%;
+  transform: translateX(-50%); */
   justify-content: space-between;
   align-items: center;
+  background: white;
   /* background: yellow; */
 }
 
-.logo {
-  display: block;
+h1 {
+  background: green;
   width:200px;
+  padding: 10px;
+  text-align:center;
+  color:white;
 }
 
 nav ul {
@@ -35,14 +44,15 @@ nav ul li {
   margin-left: 24px;
 }
 
-nav a {
+a {
   text-decoration: none;
   color:black;
   opacity: 1;
 }
 
-nav a:hover {
-  opacity:.7
+a:hover {
+  opacity:.7;
+  color: green;
 }
 
 /* 
@@ -50,6 +60,7 @@ main-visual
 */
 
 .main-visual {
+  /* margin-top:110px; */
   width: 100%;
   max-width: 1920px;
   height: 600px;
@@ -59,20 +70,9 @@ main-visual
 .wrapper {
   margin: 0 auto 100px auto;
   max-width:960px;
-  padding: 4%;
+  padding: 110px 4% 10px 4%;
   align-items: center;
   /* background:silver; */
-}
-
-
-/* 
-section
- */
-
-
-section {
-  /* width: 960px; */
-  align-items: center;
 }
 
 h2 {
@@ -100,7 +100,7 @@ img {
   border-radius: 50%;
   width:240px;
   height:240px;
-  }
+}
 
 
 .bicycle {
@@ -113,27 +113,61 @@ img {
   width: 100%;
 }
 
-/* 
-footer
- */
-
- footer {
-  text-align: center;
+.toTop {
+  position:fixed;
+  bottom: 10px;
+  right: 10px;
+  border: 3px solid green;
+  border-radius: 5px;
 }
 
-/* 
-PC版表示
+ .toTop:hover {
+   opacity: .7;
+  }
+  
+  /* 
+  footer
+  */
+
+  footer {
+   text-align: center;
+  }
+  
+  /* 
+  PC版表示
  */
-@media (min-width: 600px) {
+ @media (min-width: 600px) {
+   .header-inner {
+     position: fixed;
+     top:0;
+     left: 50%;
+     transform: translateX(-50%);
+    }
+
+    .main-visual {
+      margin-top:110px;
+    }
+    
+    .wrapper {
+      margin: 0 auto 100px auto;
+      max-width:960px;
+      padding: 110px 4% 10px 4%;
+      align-items: center;
+      /* background:silver; */
+    }
+
   .contents-inner {
     display: flex;
     justify-content: space-between;
   }
-
+  
   .bicycle-container {
     width: 30%;
     /* border: solid 1px; */
   }
-
+  
+  .toTop {
+    display: none;
+  }
 }
 
